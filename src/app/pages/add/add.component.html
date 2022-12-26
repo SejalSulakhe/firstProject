@@ -1,0 +1,40 @@
+
+<div class="add">
+<div class="container">
+<form [formGroup]="this._state.studentForm" (submit)="this._state.addstudent()">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">firstName</label>
+    <input type="text" class="form-control" [ngClass]="{'is-invalid': this._state.studentForm.controls['firstName'].invalid}" formControlName="firstName" id="firstname" placeholder="Firstname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">lastName</label>
+    <input type="text" class="form-control" [ngClass]="{'is-invalid': this._state.studentForm.controls['lastName'].invalid}" formControlName="lastName" id="lastname" placeholder="Lastname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">age</label>
+    <input type="number" class="form-control" [ngClass]="{'is-invalid': this._state.studentForm.controls['age'].invalid}" formControlName="age" id="age" placeholder="Age">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">gender</label>
+    <select class="form-control" [ngClass]="{'is-invalid': this._state.studentForm.controls['gender'].invalid}" formControlName="gender" >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">mobile</label>
+    <input type="number" class="form-control" [ngClass]="{'is-invalid': this._state.studentForm.controls['mobile'].invalid}" formControlName="mobile"id="mobile" placeholder="Mobile">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">address</label>
+    <textarea class="form-control" [ngClass]="{'is-invalid': this._state.studentForm.controls['address'].invalid}" cols="30" rows="10" formControlName="address">
+ </textarea> 
+ </div>
+ <button type="submit" class="btn btn-primary" (click)="this._state.addstudent()">Submit</button>
+
+
+</form>
+</div>
+</div>
+{{this._state.studentForm.valid}}
+{{this._state.studentForm.value | json}}

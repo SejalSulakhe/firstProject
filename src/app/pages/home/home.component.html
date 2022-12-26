@@ -1,0 +1,63 @@
+
+<div class="back">
+<h1> Student List</h1>
+
+<div class="container">
+  <div class="color">
+  <table class="table">
+    <thead>
+      <tr>
+        <th> firstname</th>
+        <th>lastname</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>address</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor="let student of this._state.students let ind=index">
+      <td> {{this.student.firstName}}</td>
+      <td> {{this.student.lastName}}</td>
+      <td> {{this.student.age}}</td>
+      <td> {{this.student.gender}}</td>
+      <td> {{this.student.address}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="this._state.deleteStudent(ind)">Delete</button>
+        <a class="btn btn-warning" [routerLink]="['/app','edit', ind]">Edit</a>
+        <button type="button" class="btn btn-info" [routerLink]="['/app','view', ind]">View</button>
+
+
+
+
+      </td>
+
+  </table>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
